@@ -75,6 +75,7 @@ section {
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #377551;
 }
 
 .sec2 {
@@ -82,6 +83,7 @@ section {
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 
 .sec3 {
@@ -89,6 +91,7 @@ section {
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: rgb(78, 95, 16);
 }
 
 .sec4 {
@@ -96,6 +99,7 @@ section {
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: rgb(192, 39, 128);
 }
 
 /* CONTROLS container that contains the icons */
@@ -151,12 +155,30 @@ section {
   pointer-events: none;
 }
 
-/* .active {
-    display: block;
-    animation: appear 1s ease-in-out;
-    transform: translateY(0) scaleY(1);
-    @keyframes appear {
-        0%{ transform: translateY(-100%) scaleY(0); }
-        100%{ transform: translateY(0) scaleY(1); }
-    }
-} *//*# sourceMappingURL=styles.css.map */
+.active {
+  display: block;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+  -webkit-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
+}
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -68,21 +68,25 @@ section {
     display: none;
     /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
     transform: translateY(0) scale(1);
+    background-color: #377551;
 }
 .sec2{
     display: none;
     /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
     transform: translateY(0) scale(1);
+    background-color: slateblue;
 }
 .sec3{
     display: none;
     /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
     transform: translateY(0) scale(1);
+    background-color: rgb(78, 95, 16);
 }
 .sec4{
     display: none;
     /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
     transform: translateY(0) scale(1);
+    background-color: rgb(192, 39, 128);
 }
 
 /* CONTROLS container that contains the icons */
@@ -126,7 +130,7 @@ section {
     }
 }
 
-/* .active {
+.active {
     display: block;
     animation: appear 1s ease-in-out;
     transform: translateY(0) scaleY(1);
@@ -134,4 +138,4 @@ section {
         0%{ transform: translateY(-100%) scaleY(0); }
         100%{ transform: translateY(0) scaleY(1); }
     }
-} */
+}
