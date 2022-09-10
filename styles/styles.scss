@@ -84,7 +84,49 @@ section {
     /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
     transform: translateY(0) scale(1);
 }
-.active {
+
+/* CONTROLS container that contains the icons */
+.controls{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    /* this is for each icon */
+    .active-btn{
+        background-color: var(--color-secondary)!important;
+      i{
+        transition: all .4s ease-in-out;
+      }
+    }
+    .control{
+        padding: 1rem;
+        cursor: pointer;
+        /* color of the icons */
+        background-color: var(--color-grey-4);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        /* to center the icons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: .7rem 0;
+        box-shadow: var(--box-shadow-1);
+        /* nesting the elements is possible with sass */
+        i{
+            font-size: 1.2rem;
+            color:var(--color-grey-2);
+            pointer-events: none;
+
+        }
+    }
+}
+
+/* .active {
     display: block;
     animation: appear 1s ease-in-out;
     transform: translateY(0) scaleY(1);
@@ -92,4 +134,4 @@ section {
         0%{ transform: translateY(-100%) scaleY(0); }
         100%{ transform: translateY(0) scaleY(1); }
     }
-}
+} */
