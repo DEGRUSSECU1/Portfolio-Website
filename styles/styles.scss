@@ -2,6 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    //to not show the bullet points of the list elements
     list-style: none;
 }
 /* Variables for night mode */
@@ -42,6 +43,7 @@ a {
 
 header {
     /* height will be fixed for all sections */
+    height: 100vh;
     min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
@@ -57,7 +59,7 @@ section {
     padding: 3rem 18rem;
 }
 /*  */
-.section {
+section {
     
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
@@ -134,19 +136,20 @@ section {
 
 
 /* Header-content */
+
 .header-content{
+
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-   
+grid-template-columns: repeat(2, 1fr);
+   height: 100%;
     .left-header{
         display: flex;
         align-items: center;
         position: relative;
         .h-shape{
             transition: all .4s ease-in-out;
-            width: 55%;
-            height: 100%;
+            width: 65%;
+            height: 80%;
             background-color: var(--color-secondary);
             position: absolute;
             left: 0;
@@ -194,7 +197,7 @@ section {
     }
 }
 
-/* REUSE button independent components */
+/* (REUSE button) & independent components */
 .btn-con{
     display: flex;
     align-self: flex-start;
@@ -249,3 +252,117 @@ section {
         100%{ transform: translateY(0) scaleY(1) }
     }
 }
+
+
+/* ABOUT PAGE */
+
+.main-title{
+    text-align: center;
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        span{
+            color: var(--color-secondary);
+        }
+        .bg-text{
+            margin: 3%;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            color: var(--color-grey-5);
+            transition: all .4s ease-in-out;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            font-size: 6.3rem;
+
+        }
+    }
+}
+
+/* ABOUT SECTION */
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    gap: 2rem;
+    padding-bottom: 5rem;
+    text-align: justify;
+    .right-about{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .about-item{
+            border: 2px solid var(--color-grey-5);
+            border-radius: 5px;
+            transition: all .4 ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            &:hover{
+                cursor: default;
+                transform: translateY(-5px);
+                border: 1px solid var(--color-secondary);
+                box-shadow: 1px 2px 15px rgba(0,0,0,.3);
+            }
+            .about-text{
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                .large-text{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: var(--color-secondary);
+                }
+                .small-text{
+                    padding-left: 3rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    color: var(--color-grey-1);
+                    letter-spacing: 2px;
+                    /* to set the line before the text "completed projects" */
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        width: 2rem;
+                        height: 2px;
+                        background-color: var(--color-grey-5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ANIMATION FOR FURTHER USAGE */
+/* 
+@keyframes loader {
+    0% {
+      translate: 200px 0px;
+      background-color: red;
+    }
+    25% {
+      translate: 200px 200px;
+      background-color: green;
+      border-radius:50%;
+    }
+    50% {
+      translate: -200px 200px;
+      background-color: yellow;
+      rotate: 45deg;
+      scale:2;
+    }
+    75% {
+      translate: -200px 0px;
+      background-color: white;
+      scale: 1;
+    }
+    100%{
+      translate: 200px 0px;
+      rotate:-45deg;
+    }
+} */
