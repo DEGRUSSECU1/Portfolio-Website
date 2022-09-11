@@ -18,14 +18,16 @@
 <body class="main-content">
 
     <header class="section sec1 header active" id="home">
+        <!-- Header grid divided in 2 img on the left and the text on the rigth -->
       <div class="header header-content">
         <div class="header left-header">
             <div class="h-shape">
                 <div class="image">
-                    <img src="./resources/DiegoPicture.jpg" style="width:400px ;" alt="website's creator picture">
+                    <img src="./resources/myphoto.png" alt="website's creator picture">
                 </div>
             </div>
-            <div class="right-header">
+        </div>
+            <div class="header right-header">
                 
             <h1 class="name">
                 Hi, I'm <span> Diego Russo</span>
@@ -46,14 +48,17 @@
                 make me valuable addition to any team
                 driven environment.
             </p>
-            <!-- download CV button -->
-            <a href="" class="main-button">
-                <span class="button-text">Download CV</span>
-                <!-- download CV icon -->
-                <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
-            </a>
+            <!-- download CV button added btn-con to set diplay:flex and have the width fixed because we were using flex in the parent container -->
+            <div class="btn-con">
+                <a href="" class="main-btn">
+                    <span class="btn-text">Download CV</span>
+                    <!-- download CV icon -->
+                    <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                </a>
             </div>
-        </div>
+         
+            </div>
+        
       </div>
     </header>
     <main>

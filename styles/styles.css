@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style: none;
 }
 
@@ -31,7 +30,6 @@ body {
   font-size: 1.1rem;
   color: var(--color-white);
   /* to make things expand horizontally and once the mouse is over and then to go back to the size when the mouse is out within the time thathas been specified */
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -63,9 +61,7 @@ section {
 
 /*  */
 .section {
-  -webkit-transform: translateY(-100%) scale(0);
-          transform: translateY(-100%) scale(0);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
 }
@@ -73,33 +69,25 @@ section {
 .sec1 {
   display: none;
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-  background-color: #377551;
+  transform: translateY(0) scale(1);
 }
 
 .sec2 {
   display: none;
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-  background-color: slateblue;
+  transform: translateY(0) scale(1);
 }
 
 .sec3 {
   display: none;
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-  background-color: rgb(78, 95, 16);
+  transform: translateY(0) scale(1);
 }
 
 .sec4 {
   display: none;
   /* makes the image move and leave a copy effect with a lower opacity moving the item in this case wont move but will be bigger for the scale property */
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-  background-color: rgb(192, 39, 128);
+  transform: translateY(0) scale(1);
 }
 
 /* CONTROLS container that contains the icons */
@@ -108,22 +96,15 @@ section {
   z-index: 10;
   top: 50%;
   right: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  flex-direction: column;
+  transform: translateY(-50%);
   /* this is for each icon */
 }
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
 }
 .controls .active-btn i {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .controls .control {
@@ -135,18 +116,11 @@ section {
   height: 55px;
   border-radius: 50%;
   /* to center the icons */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0.7rem 0;
-  -webkit-box-shadow: var(--box-shadow-1);
-          box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-1);
   /* nesting the elements is possible with sass */
 }
 .controls .control i {
@@ -155,30 +129,133 @@ section {
   pointer-events: none;
 }
 
+/* Header-content */
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+.header-content .left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .left-header .h-shape {
+  transition: all 0.4s ease-in-out;
+  width: 55%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* -1 */
+  z-index: 1;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.header-content .left-header .image {
+  border-radius: var(--br-sm-2);
+  height: 90%;
+  width: 68%;
+  margin-left: 4rem;
+  background-color: var(--color-black);
+  transition: all 0.4s ease-in-out;
+}
+.header-content .left-header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  /* to turn the image black and white effect */
+  filter: grayscale(100%);
+}
+.header-content .left-header .image img:hover {
+  filter: grayscale(0%);
+}
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+}
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+.header-content .right-header .name span {
+  color: var(--color-secondary);
+}
+.header-content .right-header p {
+  margin: 1.5rem 0;
+  line-height: 2 rem;
+  text-align: justify;
+}
+
+/* REUSE button independent components */
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+
+.main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-btn::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* to take the text away form the button */
+  transform: translateX(100%);
+  transition: all 0.6s ease-in-out;
+  /* to display behind */
+  z-index: -1;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+}
+
 .active {
   display: block;
   -webkit-animation: appear 700ms ease-in-out;
           animation: appear 700ms ease-in-out;
-  -webkit-transform: translateY(0) scaleY(1);
-          transform: translateY(0) scaleY(1);
+  transform: translateY(0) scaleY(1);
 }
 @-webkit-keyframes appear {
   0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
+    transform: translateY(-100%) scaleY(0);
   }
   100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
   }
 }
 @keyframes appear {
   0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
+    transform: translateY(-100%) scaleY(0);
   }
   100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
   }
 }/*# sourceMappingURL=styles.css.map */
