@@ -157,8 +157,8 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: appear 1s ease-in-out;
-          animation: appear 1s ease-in-out;
+  -webkit-animation: appear 700ms ease-in-out;
+          animation: appear 700ms ease-in-out;
   -webkit-transform: translateY(0) scaleY(1);
           transform: translateY(0) scaleY(1);
 }

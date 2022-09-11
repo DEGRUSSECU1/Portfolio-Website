@@ -20,7 +20,7 @@ function pageTransitions () {
         })
     }
 }
-    // section with the active class
+    // display the section with the active class
     allSelections.addEventListener("click", (e)=>{
         //will target the the section that the button correspond to 
         const id = e.target.dataset.id;
