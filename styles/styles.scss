@@ -299,6 +299,8 @@ grid-template-columns: repeat(2, 1fr);
             border-radius: 5px;
             transition: all .4 ease-in-out;
             box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            /* avoids space between p words  */
+            overflow: hidden;
             &:hover{
                 cursor: default;
                 transform: translateY(-5px);
@@ -333,6 +335,18 @@ grid-template-columns: repeat(2, 1fr);
                     }
                 }
             }
+        }
+    }
+    .left-about{
+        padding-right: 5rem;
+        p{
+            line-height: 2rem;
+            padding: 1rem;
+            color: var(--color-grey-1);
+        }
+        h4{
+            font-size: 2rem;
+            text-transform: uppercase;
         }
     }
 }
