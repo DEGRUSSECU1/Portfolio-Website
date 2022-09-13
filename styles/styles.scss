@@ -201,6 +201,7 @@ grid-template-columns: repeat(2, 1fr);
 .btn-con{
     display: flex;
     align-self: flex-start;
+    padding: 1.5rem;
 }
 .main-btn{
     border-radius: 30px;
@@ -285,11 +286,12 @@ grid-template-columns: repeat(2, 1fr);
 /* ABOUT SECTION */
 .about-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr, 1fr;
     padding-top: 3.5rem;
     gap: 2rem;
     padding-bottom: 5rem;
     text-align: justify;
+    
     .right-about{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -341,7 +343,10 @@ grid-template-columns: repeat(2, 1fr);
     }
     .left-about{
         padding-right: 5rem;
+  
+
         p{
+            
             line-height: 2rem;
             padding: 1rem;
             color: var(--color-grey-1);
@@ -356,6 +361,7 @@ grid-template-columns: repeat(2, 1fr);
 .portfolio-text{
     padding: 2rem 0;
     text-align: center;
+    
 }
 .portfolios{
     display: grid;
@@ -370,6 +376,7 @@ grid-template-columns: repeat(2, 1fr);
                 /* will cover the whole grid item */
                 object-fit: cover;
                 border-radius: 15px;
+                
             }
     
         .hover-items{

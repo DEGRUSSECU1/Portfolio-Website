@@ -196,6 +196,7 @@ section {
 .btn-con {
   display: flex;
   align-self: flex-start;
+  padding: 1.5rem;
 }
 
 .main-btn {
@@ -290,7 +291,7 @@ section {
 /* ABOUT SECTION */
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr, 1fr;
   padding-top: 3.5rem;
   gap: 2rem;
   padding-bottom: 5rem;
