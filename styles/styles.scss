@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -100,6 +101,9 @@ section {
     display: flex;
     flex-direction:column;
     transform: translateY(-50%);
+    background-color: var(--color-grey0);
+    padding: 1%;
+    border-radius: 16px;
     /* this is for each icon */
     .active-btn{
         background-color: var(--color-secondary)!important;
@@ -553,3 +557,6 @@ grid-template-columns: repeat(2, 1fr);
       rotate:-45deg;
     }
 } */
+
+/* MEDIA QUERIES MUST BE AT THE BOTTOM OF THE STYLING */
+@import "./media";
