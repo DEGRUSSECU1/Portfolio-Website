@@ -9,7 +9,7 @@
 :root {
   --color-primary: #003566;
   --color-secondary: #ffd60a;
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -57,7 +57,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 10rem;
 }
 
 /*  */
@@ -99,8 +99,10 @@ section {
   right: 3%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
   transform: translateY(-50%);
-  padding: 1%;
+  padding: 1.5%;
   border-radius: 16px;
   box-shadow: 0 0 20px 0px lightyellow;
   /* this is for each icon */
@@ -304,7 +306,6 @@ section {
   display: flex;
   align-self: flex-start;
   padding: 1.5rem;
-  margin-bottom: 20%;
 }
 
 .main-btn {
@@ -399,7 +400,6 @@ section {
 /* ABOUT SECTION */
 .about-container {
   display: grid;
-  grid-template-columns: 2fr, 1fr;
   padding-top: 3.5rem;
   gap: 2rem;
   padding-bottom: 5rem;
@@ -410,6 +410,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   max-height: 60vh;
+  margin: 2%;
 }
 .about-container .right-about .about-item {
   border: 2px solid var(--color-grey-5);
@@ -575,7 +576,7 @@ section {
 } */
 /* MEDIA QUERIES MUST BE AT THE BOTTOM OF THE STYLING */
 /* FILE FOR MEDIA QUERIES */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   header {
     padding: 0;
   }
@@ -592,10 +593,13 @@ section {
     top: auto;
     bottom: 0;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: var(--color-grey-5);
   }
   .controls .control {
