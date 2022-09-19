@@ -5,7 +5,13 @@
         padding: 0;
     }
     header .right-header{
-        padding: 2rem!important;
+        padding: 1rem!important;
+    }
+    header .left-header{
+        padding: 1rem!important;
+        img{
+            width: 100px;
+        }
     }
 
     .controls{
@@ -17,16 +23,11 @@
         transform: translateX(-50%);
         width: 100%;
         background-color: var(--color-grey-5);
+      
         .control{
             margin: 1rem .3rem;
         }
     }
 
-    .cubespinner{
-
-        div{
-            transform-origin: 100px 100px 0;
-             margin-left: calc(50% - 100px);
-        }
-    }
+ 
 }
